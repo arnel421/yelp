@@ -83,33 +83,4 @@ public class GoogleVisionServiceImpl implements ImageDetectorService {
 		return new ByteArrayInputStream(imageByte);
 	}
 	
-//	public static void facialRecognition1(InputStream base64Image) throws IOException {
-//		List<AnnotateImageRequest> requests = new ArrayList<>();
-//		requests.add(getImageRequest(base64Image, Feature.Type.FACE_DETECTION));
-//		
-//		try (ImageAnnotatorClient client = ImageAnnotatorClient.create()) {
-//            BatchAnnotateImagesResponse response = client.batchAnnotateImages(requests);
-//            List<AnnotateImageResponse> responses = response.getResponsesList();
-//            for (AnnotateImageResponse res : responses) {
-//                if (res.hasError()) {
-//                    System.out.println("Error: " + res.getError().getMessage());
-//                    return;
-//                }
-//
-//                for (EntityAnnotation annotation : res.getTextAnnotationsList()) {
-//                    System.out.println("Text: " + annotation.getDescription());
-//                    System.out.println("Position : " + annotation.getBoundingPoly());
-//                }
-//            }
-//		}
-//	}
-//	
-//	public static void main(String[] args) throws IOException {
-//		String imagePath = "D:\\Work\\Exercises\\project\\yelpOthers\\Image\\testImage.jpg";
-//		File file = new File(imagePath);
-//		byte[] imageByte = FileUtils.readFileToByteArray(file);
-//		facialRecognition1(new ByteArrayInputStream(imageByte));
-//		System.out.println("END");
-//	}
-	
 }

@@ -16,8 +16,6 @@ import com.exam.yelp.dao.TopicDao;
 import com.exam.yelp.model.TopicModel;
 import com.exam.yelp.model.UserReviewModel;
 import com.exam.yelp.util.FileResourceUtil;
-import com.exam.yelp.util.JsonUtil;
-import com.fasterxml.jackson.core.JsonProcessingException;
 
 @Repository
 public class TopicDaoImpl implements TopicDao {
@@ -51,12 +49,6 @@ public class TopicDaoImpl implements TopicDao {
 			LOGGER.error(e.getMessage(), e);
 		}
 		return null;
-	}
-	
-	public static void main(String[] args) throws JsonProcessingException {
-		TopicDaoImpl a = new TopicDaoImpl();
-		TopicModel model = a.getTopic(4444);
-		System.out.println(JsonUtil.toJsonString(model));
 	}
 	
 }
